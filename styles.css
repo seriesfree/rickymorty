@@ -1,0 +1,221 @@
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .background-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw; /* Ancho igual al ancho de la ventana del navegador */
+        height: 100vh; /* Altura igual a la altura de la ventana del navegador */
+        background-image: url('https://images7.alphacoders.com/133/1335145.jpg');
+        background-size: cover;
+        z-index: -1;
+    }
+
+    h1 {
+        margin-top: 90px;
+        color: rgb(0, 0, 0);
+        background-color: rgba(235, 229, 59, 0.7); /* Fondo semitransparente para el contenido principal */
+        padding: 10px 13px;
+        border-radius: 10px;
+        max-width: 400px; /* Ancho máximo del fondo */
+        margin: 20px 0 20px 701px; /* Establece un margen de 20px arriba, 0 a la derecha, 20px abajo y 20px a la izquierda */
+    }    
+    
+
+    .main-content {
+        background-color: rgba(235, 229, 59, 0.7); /* Fondo semitransparente para el contenido principal */
+        max-width: 400px; /* Ajusta el ancho máximo del contenido principal */
+        margin: 20px 0 20px 700px; /* Establece un margen de 20px arriba, 0 a la derecha, 20px abajo y 20px a la izquierda */
+        padding: 14px; /* Ajusta el relleno del contenido principal según sea necesario */
+        border-radius: 10px; /* Borde redondeado para el contenido principal */
+    }
+
+    .temporadas {
+        margin-bottom: 20px; /* Espacio inferior entre temporadas */
+    }
+
+    .temporada-titulo {
+        color: rgb(0, 0, 0);
+    }
+
+    .episodios {
+        list-style-type: none;
+        padding: 0;
+        overflow: hidden; /* Oculta cualquier contenido que exceda la altura máxima */
+        max-height: 0; /* Altura máxima inicialmente cero */
+        transition: max-height 0.3s ease; /* Transición suave para la altura máxima */
+    }
+
+    .episodios.mostrar {
+        max-height: 500px; /* Altura máxima cuando la clase 'mostrar' está presente */
+    }
+
+    .episodios li {
+        margin-bottom: 5px;
+    }
+
+    .episodios li a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-weight: bold; /* Agregar negrita */
+        font-size: 16px; /* Tamaño de la fuente */
+    }
+
+    .episodios li a:hover {
+        color: rgb(63, 147, 66);
+    }
+
+    .video-container {
+        width: 300px; /* Ajusta el ancho según sea necesario */
+        height: 950px; /* Ajusta el alto según sea necesario */
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* Alinea los contenedores al final del eje transversal (derecha) */
+    }
+
+    .video-box {
+        width: 455px;
+        height: 900px;
+        background-color: lightgray;
+        margin-bottom: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .video-box a {
+        text-decoration: none;
+        color: blue;
+    }
+
+    .video-container iframe {
+        border: 3px solid rgba(235, 229, 59, 0.7); /* Agrega un borde de 5px con el color especificado */
+        border-radius: 10px; /* Añade un borde redondeado */
+    }
+
+    .left {
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 20px;
+    }
+
+    .video-container.left {
+        top: 0;
+        left: 0;
+        padding: 27px;
+        align-items: flex-start; /* Alinea los elementos al inicio del eje transversal (izquierda) */
+    }
+
+    .video-container.left iframe {
+        width: 525px; /* Ajusta el ancho según sea necesario */
+        height: 900px; /* Ajusta el alto según sea necesario */
+    }
+
+    /* Estilos para el contenedor del botón de donación */
+.donation-container {
+    text-align: center; /* Centra horizontalmente el contenido */
+    margin-top: -83px; /* Espacio entre los banners "Temporada" y el botón de donación */
+    margin-left: -33px; /* Ajusta el margen izquierdo según tus preferencias */
+}
+
+/* Estilos para el botón de donación */
+.donation-button {
+    display: inline-block;
+    padding: 10px 145px;
+    background-color: rgba(235, 229, 59, 0.7); /* Fondo semitransparente para el contenido principal */
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    font-weight: bold; /* Agregar negrita */
+    font-size: 30px; /* Tamaño de la fuente */
+}
+
+.donation-button:hover {
+    color: rgb(63, 147, 66);
+}
+
+/* Media query para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+    /* Otras modificaciones */
+
+    .donation-container {
+        position: relative;
+        top: -65px; /* Ajustar según sea necesario para mover el botón hacia arriba */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .donation-button {
+        padding: 20px 130px !important; /* Aumentar el padding para hacer el botón más grande en dispositivos móviles */
+        font-size: 30px !important; /* Ajustar el tamaño de la fuente para que sea proporcional al tamaño del botón */
+    }
+
+    .video-container,
+    .video-container.left {
+        display: none; /* Ocultar los videos en dispositivos móviles */
+    }
+
+    h1 {
+        margin: 20px auto;
+        text-align: center;
+        max-width: 90%;
+    }
+
+    .main-content {
+        margin: 20px auto;
+        padding: 14px;
+        border-radius: 10px;
+        max-width: 90%;
+    }
+
+    .temporada-titulo {
+        text-align: center;
+    }
+
+    .episodios {
+        max-height: none;
+    }
+
+    .video-container,
+    .video-container.left {
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 0;
+        margin: 20px auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .donation-container {
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .donation-button {
+        padding: 10px 50px;
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    /* Otras modificaciones */
+
+    /* Cambiar el fondo para dispositivos móviles */
+    .background-image {
+        background-image: url('https://i.pinimg.com/originals/24/dd/4e/24dd4ec2c925a78141741e45bf704b18.jpg');
+    }
+}
+
